@@ -8,6 +8,6 @@
   <input type="text" name="answer" >
   <input type="submit" value="Play">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <%= hidden_field_tag :answer, [params:answer] %>
-
+  <input id="collected_input" name="collected_input" onchange="alert('Input collected!')"
+#    type="hidden" value=[params:answer] />
   </form>
