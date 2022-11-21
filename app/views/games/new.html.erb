@@ -1,0 +1,13 @@
+
+  <h1>New Game<h1>
+
+<%= @letters.to_a.each { |letter| print letter } %>
+
+<form action="/score" method="POST" data-turbo="false">
+  <h2>What's the longest word you can find?<h2>
+  <input type="text" name="answer" >
+  <input type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :answer, [params:answer] %>
+
+  </form>
